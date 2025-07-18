@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 TrackKaro – Your Personal Job Application Tracker
 
-## Getting Started
+TrackKaro is a productivity-focused job tracking app that helps job seekers build consistent habits, visualize application progress, and stay motivated — just like a fitness tracker, but for job hunting.
 
-First, run the development server:
+🛠️ Built with modern tech. Inspired by platforms like LeetCode and jobpulse.fyi.
+
+
+## ✅ Features
+
+| Feature | Description |
+|--------|-------------|
+| 🔐 **Google Login (Supabase Auth)** | One-click secure login without the hassle of managing passwords |
+| 📆 **Daily Tracker Counter** | Add or subtract how many jobs you've applied for today |
+| 📊 **Heatmap Visualization** | Get a LeetCode-style calendar heatmap showing your daily consistency |
+| 📈 **Applications Summary** | Instantly see monthly and total job applications |
+| 💾 **Auto-Save with Supabase** | Cloud-synced data — refresh-proof and persistent |
+| 🖥️ **Responsive UI** | Sleek, modern UI built with Tailwind CSS for clean UX |
+
+---
+
+## 💡 Why TrackKaro?
+
+Job hunting can feel like a black box — tiring, disorganized, and discouraging.  
+**TrackKaro** solves that by offering:
+
+| Problem | How TrackKaro Helps |
+|--------|----------------------|
+| ❌ Lack of motivation | ✅ Visual streaks encourage daily action |
+| ❌ Forgetting progress | ✅ Dashboard shows daily, monthly, total stats |
+| ❌ Manual spreadsheets | ✅ Centralized, cloud-based job log |
+| ❌ Overwhelmed by process | ✅ Progress insights to stay organized and in control |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tech/Tool | Purpose |
+|--------|-----------|---------|
+| **Frontend** | Next.js (App Router) | React-based framework for UI |
+|  | Tailwind CSS | Utility-first styling for clean UI/UX |
+|  | TypeScript | Type-safe JavaScript |
+|  | Day.js | Date formatting |
+|  | React Calendar Heatmap | Streak visualization |
+| **Authentication** | Supabase Auth | Google OAuth login |
+| **Backend/DB** | Supabase (PostgreSQL) | Managed database for users & logs |
+| **Database Table** | `applications` | Stores date-wise job count |
+| **Deployment** | Vercel / Netlify / Render | *(optional next step)* |
+
+---
+
+## 🚧 Future Enhancements
+
+- 🎯 **Goal Setting:** e.g., “Apply to 5 jobs/day”
+- 📄 **Saved Job Descriptions**
+- ⏳ **Application Status Tracker:** (Applied → Interview → Offer)
+- 🌙 **Dark Mode Toggle**
+- ✉️ **Email Reminders** (Daily/Weekly)
+- 📤 **Export as CSV or PDF**
+
+---
+
+## 📦 Getting Started (Local Dev)
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/trackkaro.git
+cd trackkaro
+
+# 2. Install dependencies
+npm install
+
+# 3. Create .env.local file and add:
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# 4. Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

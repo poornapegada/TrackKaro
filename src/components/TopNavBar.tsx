@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import dayjs from 'dayjs'
+import Link from 'next/link'
 
-// Accept props from parent
 type TopNavBarProps = {
   userEmail: string | null
 }
@@ -50,11 +50,26 @@ export default function TopNavBar({ userEmail }: TopNavBarProps) {
 
   return (
     <nav className="w-full flex justify-between items-center px-6 py-4 bg-white shadow-md">
-      <h1 className="text-xl font-bold text-blue-600">TrackKaro</h1>
+      {/* TrackKaro Brand Link */}
+      <Link href="/" className="text-xl font-bold text-blue-600 hover:underline">
+        TrackKaro
+      </Link>
+
       <div className="flex items-center gap-6">
+        {/* Talk with Expert Button */}
+        <Link
+          href="/experts"
+          className="bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition"
+        >
+          Talk with Expert
+        </Link>
+
+        {/* Email Display */}
         <span className="text-gray-700 text-sm">
           📧 {userEmail}
         </span>
+
+        {/* Logout Button */}
         <button
           onClick={handleLogout}
           className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded shadow"
